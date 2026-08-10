@@ -24,14 +24,17 @@
     </nav>
 </header>
 <main class="container">
-    <section class="section">
+    <section class="section measure">
         <h1>Ressources</h1>
+        <div class="notice">
+            <p><strong>Information :</strong> Les ressources proposées sont à visée informative. Elles ne remplacent pas une prise en charge médicale ou psychologique personnalisée.</p>
+        </div>
         <p>Un hub de ressources utiles : guides pratiques, checklists et liens vers les institutions de référence.</p>
 
         <h2>Guides téléchargeables</h2>
         <ul>
-            <li>Guide de conversation pour les proches (à télécharger)</li>
-            <li>Checklist : préparer la première consultation</li>
+            <li><a href="assets/downloads/guide-conversation.pdf" class="btn btn-secondary" download>Télécharger : Guide de conversation pour les proches</a></li>
+            <li><a href="assets/downloads/checklist-premiere-consultation.pdf" class="btn btn-secondary" download>Télécharger : Checklist première consultation</a></li>
         </ul>
 
         <h2>Ressources d'urgence</h2>
@@ -39,12 +42,37 @@
 
         <h2>Sources et institutionnels</h2>
         <ul>
-            <li><a href="https://www.has-sante.fr">HAS</a></li>
-            <li><a href="https://www.inserm.fr">Inserm</a></li>
-            <li><a href="https://www.ameli.fr">Ameli</a></li>
-            <li><a href="https://www.fnatc.org">FNA-TCA</a></li>
+            <li><a href="https://www.has-sante.fr" target="_blank" rel="noopener">HAS</a></li>
+            <li><a href="https://www.inserm.fr" target="_blank" rel="noopener">Inserm</a></li>
+            <li><a href="https://www.ameli.fr" target="_blank" rel="noopener">Ameli</a></li>
+            <li><a href="https://www.fnatc.org" target="_blank" rel="noopener">FNA-TCA</a></li>
         </ul>
     </section>
 </main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Dois-je parler du poids avec mon proche ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Il est préférable d'éviter de centrer la conversation uniquement sur le poids. Parlez des comportements observés et de la souffrance ressentie, avec empathie."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que faire si la personne refuse l'aide ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Proposer du soutien concret sans forcer, maintenir une présence bienveillante, et orienter vers des ressources d'écoute ou un professionnel si la situation évolue."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>
