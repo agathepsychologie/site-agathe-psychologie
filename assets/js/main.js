@@ -45,7 +45,7 @@ if (contactForm) {
 }
 
 // Révélation douce des cartes au scroll (amélioration progressive : sans JS, tout reste simplement visible)
-const revealTargets = document.querySelectorAll('.card, .testimonial-card, .step, .commitment-item, .trust-item');
+const revealTargets = document.querySelectorAll('.card, .testimonial-card, .step, .commitment-item, .trust-item, .door-card, .myth-item');
 if ('IntersectionObserver' in window && revealTargets.length) {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
