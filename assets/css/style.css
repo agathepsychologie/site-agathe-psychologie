@@ -36,7 +36,39 @@ body {
 }
 
 a { color: inherit; }
+a:link, a:visited { color: inherit; }
 img { max-width: 100%; display: block; }
+
+/* ---------- Typographie de base pour le contenu "libre" (sans classe) ---------- */
+/* Filet de sécurité : tout titre, liste ou lien qui n'est pas déjà pris en
+   charge par un composant spécifique (.card h3, .section-header h2, etc.)
+   hérite quand même de l'identité visuelle du site plutôt que du rendu
+   par défaut du navigateur. Les règles plus spécifiques ailleurs dans ce
+   fichier restent prioritaires. */
+main h1, main h2, main h3,
+.measure h1, .measure h2, .measure h3 {
+    color: var(--text-dark);
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 2rem 0 1rem;
+}
+main h1:first-child, main h2:first-child, main h3:first-child,
+.measure h1:first-child, .measure h2:first-child, .measure h3:first-child { margin-top: 0; }
+main h2, .measure h2 { font-size: clamp(1.4rem, 2.6vw, 1.8rem); }
+main h3, .measure h3 { font-size: 1.15rem; }
+main p, .measure p { color: var(--text-light); line-height: 1.8; margin-bottom: 1.1rem; }
+main ul, main ol, .measure ul, .measure ol { margin: 0 0 1.3rem 1.4rem; }
+main li, .measure li { color: var(--text-light); line-height: 1.9; margin-bottom: .4rem; }
+main a:not(.btn):not(.card-link):not(.cta-button), .measure a:not(.btn):not(.card-link):not(.cta-button) {
+    color: var(--primary-dark);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: rgba(225,137,159,0.4);
+    text-underline-offset: 2px;
+}
+main a:not(.btn):not(.card-link):not(.cta-button):hover,
+.measure a:not(.btn):not(.card-link):not(.cta-button):hover { text-decoration-color: var(--primary-dark); }
+main strong, .measure strong { color: var(--text-dark); }
 
 /* ---------- Header ---------- */
 .header {
@@ -53,27 +85,28 @@ img { max-width: 100%; display: block; }
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.1rem 0;
-    min-height: 88px;
+    padding: 0.9rem 0;
+    min-height: 100px;
     gap: 1.5rem;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 16px;
-    font-size: 1.5rem;
+    gap: 14px;
+    font-size: 1.28rem;
     font-weight: 700;
     color: var(--text-dark);
     text-decoration: none;
     flex-shrink: 0;
+    letter-spacing: -.01em;
 }
 
-.logo-icon { width: 66px; height: 66px; display: flex; align-items: center; justify-content: center; }
+.logo-icon { width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; }
 .logo-icon svg { width: 100%; height: 100%; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1)); }
 .logo-icon .cls-1 { fill: var(--primary-color); transition: fill 0.3s ease; }
 .logo:hover .logo-icon .cls-1 { fill: var(--primary-dark); }
-.logo-sub { font-size: 0.72rem; font-weight: 400; opacity: 0.75; }
+.logo-sub { font-size: 0.66rem; font-weight: 400; opacity: 0.7; letter-spacing: .02em; margin-top: 1px; }
 
 .nav-menu {
     display: flex;
@@ -126,9 +159,10 @@ img { max-width: 100%; display: block; }
         box-shadow: var(--shadow);
     }
     .nav-menu.active { display: flex; }
-    .nav { padding: 1rem 0; min-height: 78px; }
-    .logo { font-size: 1.15rem; gap: 11px; }
-    .logo-icon { width: 54px; height: 54px; }
+    .nav { padding: 0.9rem 0; min-height: 86px; }
+    .logo { font-size: 1.02rem; gap: 10px; }
+    .logo-icon { width: 62px; height: 62px; }
+    .logo-sub { font-size: 0.58rem; }
 }
 
 /* ---------- Hero ---------- */
